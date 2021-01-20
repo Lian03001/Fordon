@@ -3,21 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace Fordon_2
 {
     class Program
     {
         public static void Main(string[] args)
         {
-            Fordon SAAB = new Fordon();
-            SAAB.setTillverkare("SAAB");
-            SAAB.setModell("95a");
-            SAAB.setÅrsmodell(99);
-
-            Console.WriteLine(SAAB.getTillverkare());
-            Console.WriteLine(SAAB.getModell());
-            Console.WriteLine(SAAB.getÅrsmodell());
+            List<Fordon> fordon = new List<Fordon>();
+            fordon.Add(new Fordon("SAAB", "9-3", 08));
+            foreach (Fordon e in fordon)
+            {
+                Console.WriteLine(e);
+            }
         }
     }
 }

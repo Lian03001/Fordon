@@ -8,17 +8,18 @@ namespace Fordon_2
 {
     class Fordon
     {
-        private string Tillverkare;
-        private string Modell;
-        private int Årsmodell;
-
-        public void setTillverkare(string t){Tillverkare = t;}
-        public string getTillverkare(){return Tillverkare;}
-
-        public void setModell(string m){Modell = m;}
-        public string getModell(){return Modell;}
-
-        public void setÅrsmodell(int å){Årsmodell = å;}
-        public int getÅrsmodell(){return Årsmodell;}
+        public string tillverkare { get; set; }
+        public string modell { get; set; }
+        public int årsmodell { get; set; }
+        public override string ToString()
+        {
+            return "tillverkare: " + tillverkare + "\nmodel: " + modell + "\nårsmodell: " + årsmodell;
+        }
+        public Fordon(String t, String m, int å)
+        {
+            tillverkare = t;
+            modell = m;
+            årsmodell = å;
+        }
     }
 }
